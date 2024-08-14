@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle, #000428, #004e92); /* Galaksi etkisi */
+    overflow: hidden; /* Taşmayı önle */
+}
+
+.quiz-container {
+    background-color: #adefef; /* Yarı saydam beyaz arka plan */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative; /* Overlay için */
+    z-index: 1; /* Overlay'in altında kalmaması için */
+}
+
+.quiz-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    
+}
+
+.options {
+    position: relative; /* Seçeneklerin üst üste gelmesini sağlar */
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.options button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: neon; /* Neon arka plan rengi */
+    color: black; /* Buton üzerindeki yazı rengi siyah */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.options button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #000428, #004e92, #00ffff, #ff00ff); /* Galaksi etkisi */
+    display: none; /* Başlangıçta gizli */
+    z-index: 2; /* İçerikten üstte */
+    transition: opacity 1s ease-out; /* Opaklık geçişi */
+}
+
+#effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ff0000;
+    display: none;
+    z-index: 15;
+    opacity: 0;
+    transform: scale(0);}
+
+#message {
+    position: absolute;
+    top: 50%;
+    left: 30%; /* Yazıyı biraz sola kaydırdım */
+    transform: translate(-50%, -50%);
+    color: white;
+    
+    opacity: 0;
+    z-index: 20;
+    font-family: 'Times New Roman', serif;
+
+
+
+    font-size: 4rem; /* Yazı boyutunu ayarlar */
+    
+    
+}
+
